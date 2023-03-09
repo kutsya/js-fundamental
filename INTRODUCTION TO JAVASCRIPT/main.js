@@ -29,6 +29,10 @@ console.log(b);
 
 const isAdult = confirm('Are you of legal age?');
 
+//? Task 6
+
+
+
 //? Task 7
 
 let login = prompt('Dear User, please write your login');
@@ -39,3 +43,5 @@ let password = prompt('Dear user, please write ypor password', 'qwerty');
 alert(password);
 
 //? Task 8
+
+
