@@ -15,15 +15,15 @@ console.log('tableSize', tableSize);
 //? Task 4
 
 let number = 15; //*Number
-console.log(number);
+console.log(typeof number, number);
 let string = 'home'; //*String
-console.log(string);
+console.log(typeof string, string);
 let boolean = true; //*Boolean
-console.log(boolean);
+console.log(typeof boolean, boolean);
 let a = null; //*Null
-console.log(a);
+console.log(typeof a, a);
 let b; //*Undefined 
-console.log(b);
+console.log(typeof b, b);
 
 //? Task 5
 
@@ -31,6 +31,21 @@ const isAdult = confirm('Are you of legal age?');
 
 //? Task 6
 
+let firstName = "Іван";
+let lastName = "Петров";
+let group = "js-00";
+let birthYear = 2000;
+let isMarried = false;
+
+console.log(typeof birthYear, birthYear);
+console.log(typeof isMarried, isMarried);
+console.log(typeof firstName, firstName);
+
+let nullAdult = null;
+let undefinedAdult;
+
+console.log(typeof nullAdult, nullAdult);
+console.log(typeof undefinedAdult, undefinedAdult);
 
 
 //? Task 7
@@ -44,4 +59,10 @@ alert(password);
 
 //? Task 8
 
+const secondsInHour = 60 * 60;
+const secondsInDay = secondsInHour * 24;
+const secondsInMonth = secondsInDay * 30;
 
+console.log("Кількість секунд в годині:", secondsInHour);
+console.log("Кількість секунд в добі:", secondsInDay);
+console.log("Кількість секунд в місяці:", secondsInMonth);
