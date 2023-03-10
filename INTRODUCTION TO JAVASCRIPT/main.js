@@ -41,11 +41,11 @@ console.log(typeof birthYear, birthYear);
 console.log(typeof isMarried, isMarried);
 console.log(typeof firstName, firstName);
 
-let nullAdult = null;
-let undefinedAdult;
+let nullResult = 0;
+let undefinedResult;
 
-console.log(typeof nullAdult, nullAdult);
-console.log(typeof undefinedAdult, undefinedAdult);
+console.log(typeof nullResult, nullResult);
+console.log(typeof undefinedResult, undefinedResult);
 
 
 //? Task 7
@@ -66,3 +66,5 @@ const secondsInMonth = secondsInDay * 30;
 console.log("Кількість секунд в годині:", secondsInHour);
 console.log("Кількість секунд в добі:", secondsInDay);
 console.log("Кількість секунд в місяці:", secondsInMonth);
+
+//? Task 9 
