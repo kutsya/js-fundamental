@@ -68,3 +68,4 @@ console.log("Кількість секунд в добі:", secondsInDay);
 console.log("Кількість секунд в місяці:", secondsInMonth);
 
 //? Task 9 
+
