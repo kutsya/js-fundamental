@@ -66,6 +66,3 @@ const secondsInMonth = secondsInDay * 30;
 console.log("Кількість секунд в годині:", secondsInHour);
 console.log("Кількість секунд в добі:", secondsInDay);
 console.log("Кількість секунд в місяці:", secondsInMonth);
-
-//? Task 9 
-
