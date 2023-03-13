@@ -20,7 +20,7 @@ let string = 'home'; //*String
 console.log(typeof string, string);
 let boolean = true; //*Boolean
 console.log(typeof boolean, boolean);
-let a = null; //*Null
+let a = 0; //*Null
 console.log(typeof a, a);
 let b; //*Undefined 
 console.log(typeof b, b);
