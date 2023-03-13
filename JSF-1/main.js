@@ -20,7 +20,7 @@ let string = 'home'; //*String
 console.log(typeof string, string);
 let boolean = true; //*Boolean
 console.log(typeof boolean, boolean);
-let a = 0; //*Null
+let a = null; //*Null
 console.log(typeof a, a);
 let b; //*Undefined 
 console.log(typeof b, b);
@@ -41,7 +41,7 @@ console.log(typeof birthYear, birthYear);
 console.log(typeof isMarried, isMarried);
 console.log(typeof firstName, firstName);
 
-let nullResult = 0;
+let nullResult = null;
 let undefinedResult;
 
 console.log(typeof nullResult, nullResult);
