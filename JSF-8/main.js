@@ -83,7 +83,7 @@ function checkLogin(str) {
     return numbers !== null;
 };
 
-console.log(checkLogin('ee1.1ret3')); // True
-console.log(checkLogin('ee1*1ret3')); // false
-console.log(checkLogin('e1.1ret3')); // false
-console.log(checkLogin('ee1ret')); // false
+console.log(checkLogin('ee1.1ret3')); 
+console.log(checkLogin('ee1*1ret3')); 
+console.log(checkLogin('e1.1ret3')); 
+console.log(checkLogin('ee1ret')); 
