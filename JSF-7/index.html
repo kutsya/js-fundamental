@@ -5,15 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button and Link Events</title>
+    <style>
+        body {
+            background-color: white;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 100px;
+        }
+
+        .button {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.5em;
+            cursor: pointer;
+        }
+
+        .link {
+            color: blue;
+            text-decoration: none;
+            font-size: 0.5em;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Task 2 -->
     <p id="text">I'm learning JavaScript events!</p>
     <div>
         <button onclick="changeCSS()">Change style!</button>
     </div>
-
+    <!-- Task 3 -->
+    <button class="button" id="button1">Button 1</button>
+    <button class="button" id="button2">Button 2</button>
+    <button class="button" id="button3">Button 3</button>
+    <a class="link" id="link">Link</a>
+    <!-- Task 4 -->
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+    </select>
+    <button onclick="deleteSelected()">Choose and Delete</button>
+    <!-- Task 5 -->
+    <div>
+        <button id="myButton">Live button!</button>
+    </div>
+    <div id="size"></div>
+    <!-- Task 7 -->
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+    <select name="cities" id="cities"></select>
+    <p></p>
     <script>
         function changeCSS() {
             var text = document.getElementById("text");
@@ -22,7 +72,7 @@
             text.style.fontFamily = "Comic Sans MS";
         }
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
 </body>
 
