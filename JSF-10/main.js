@@ -89,6 +89,7 @@ function mapBuilder(keysArray, valuesArray) {
 
     return map;
 };
+
 let keys = [1, 2, 3, 4];
 let values = ["div", "span", "b", "i"];
 let map = mapBuilder(keys, values);
