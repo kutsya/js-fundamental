@@ -3,9 +3,10 @@ const selectors = {
     board: document.querySelector('.board'),
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
-    start: document.querySelector('button'),
+    start: document.querySelector('.start'),
+    finish: document.querySelector('.finish'),
     win: document.querySelector('.win')
-}
+};
 
 const state = {
     gameStarted: false,
@@ -13,7 +14,7 @@ const state = {
     totalFlips: 0,
     totalTime: 0,
     loop: null
-}
+};
 
 const shuffle = array => {
     const clonedArray = [...array]
@@ -27,7 +28,7 @@ const shuffle = array => {
     }
 
     return clonedArray
-}
+};
 
 const pickRandom = (array, items) => {
     const clonedArray = [...array]
@@ -41,7 +42,7 @@ const pickRandom = (array, items) => {
     }
 
     return randomPicks
-}
+};
 
 const generateGame = () => {
     const dimensions = selectors.board.getAttribute('data-dimension')
@@ -67,7 +68,7 @@ const generateGame = () => {
     const parser = new DOMParser().parseFromString(cards, 'text/html')
 
     selectors.board.replaceWith(parser.querySelector('.board'))
-}
+};
 
 const startGame = () => {
     state.gameStarted = true
@@ -79,7 +80,26 @@ const startGame = () => {
         selectors.moves.innerText = `${state.totalFlips} moves`
         selectors.timer.innerText = `Time: ${state.totalTime} sec`
     }, 1000)
-}
+};
+
+const finishGame = () => {
+    selectors.boardContainer.classList.add('flipped')
+    selectors.win.innerHTML = `
+    <span class="win-text">
+        You finished!<br />
+        with <span class="highlight">${state.totalFlips}</span> moves<br />
+        in <span class="highlight">${state.totalTime}</span> seconds
+    </span>
+    `
+    state.gameFinished = true
+};
+
+
+selectors.moves.parentNode.insertBefore(selectors.finish, selectors.moves.nextSibling);
+selectors.finish.innerText = 'Finish';
+selectors.finish.classList.add('finish');
+selectors.finish.addEventListener('click', finishGame);
+
 
 const flipBackCards = () => {
     document.querySelectorAll('.card:not(.matched)').forEach(card => {
@@ -87,7 +107,7 @@ const flipBackCards = () => {
     })
 
     state.flippedCards = 0
-}
+};
 
 const flipCard = card => {
     state.flippedCards++
@@ -126,7 +146,7 @@ const flipCard = card => {
             clearInterval(state.loop)
         }, 1000)
     }
-}
+};
 
 const attachEventListeners = () => {
     document.addEventListener('click', event => {
@@ -139,7 +159,7 @@ const attachEventListeners = () => {
             startGame()
         }
     })
-}
+};
 
 generateGame()
 attachEventListeners()
