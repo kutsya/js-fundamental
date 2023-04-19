@@ -34,6 +34,9 @@ button {
     color: #FFF;
     font-size: 14pt;
     font-weight: bold;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 .board-container {
     position: relative;
